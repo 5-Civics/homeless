@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>My Flask Site</title>
+    </head>
+    <body>
+        <h1>Welcome to homeless demo site</h1>
+        <p>We are here to show a map of austin and, to show what homeless shelters and where some camps are around austin.<p>
+
+
+        <div><a href="{{ host }}about">About</a></div>
+        <p>{% if msg %} {{ msg }} {% endif %}</p>
+
+        <div><a href="{{ host }}map">Homeless Map </a></div>
+
+        <div><a href="{{ host }}contact">Contact us </a></div>
+    </body>
+</html>
