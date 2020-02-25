@@ -12,14 +12,20 @@ def main():
 
 @app.route('/about', methods=['GET'])
 def mission():
-    hostname = request.host_url
-    message = 'homeless map'
-    return render_template('about.html', host=hostname, msg=message)
+    return render_template('about.html')
 
 
 
 @app.route('/map', methods=['GET'])
 def map():
     return render_template('map.html')
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html')
+
+@app.route('/interface', methods=['GET'])
+def interface():
+    return render_template('interface.html')
 
 

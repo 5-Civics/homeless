@@ -1,17 +1,88 @@
-<html>
-    <head>
-        <title>My Flask Site</title>
-    </head>
-    <body>
-        <h1>Welcome to homeless demo site</h1>
-        <p>We are here to show a map of austin and, to show what homeless shelters and where some camps are around austin.<p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Austin Helpers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Trebuchet MS;
+  margin: 0;
+}
 
+p.adding {
+  padding-bottom: 25px;
+}
 
-        <div><a href="{{ host }}about">About</a></div>
-        <p>{% if msg %} {{ msg }} {% endif %}</p>
+/* Header/Logo Title */
+.header {
+  padding: 1px;
+  text-align: center;
+  background: black;
+  color: white;
+  font-size: 30px;
+}
 
-        <div><a href="{{ host }}map">Homeless Map </a></div>
+/*footer*/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
 
-        <div><a href="{{ host }}contact">Contact us </a></div>
-    </body>
+/* Page Content */
+.content {padding:10px;}
+
+.box {
+  color: #000;
+  background-color: #FFF;
+  padding: 10px;
+  text-align: center;
+
+  width: 200px;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+</style>
+</head>
+<body style="background-color:#e0f2ff;">
+
+<div class="header">
+  <h1>Austin Helpers - Lending the homeless a helping hand</h1>
+</div>
+
+<div class="content">
+  <h1>Welcome to our website!</h1>
+  <h3>We are a group dedicated to solving the homeless crisis in Austin.</h3>
+
+  <div><a style="font-weight:bold" href="{{ host }}about">About</a></div>
+  <div class="box">Our mission and what we're about</div>
+  <p class="adding"> </p>
+
+  <div><a style="font-weight:bold" href="{{ host }}info-resource">Information and Resources </a></div>
+  <div class="box">Info about homelessness and resources to help those struggling with their home situation</div>
+  <p class="adding"> </p>
+
+  <div><a style="font-weight:bold" href="{{ host }}map">Map </a></div>
+  <div class="box">A map with places of importance for homeless people</div>
+  <p class="adding"> </p>
+
+  <div><a style="font-weight:bold" href="{{ host }}contact">Contact Us </a></div>
+  <div class="box">Send any questions, comments, suggestions or concerns here</div>
+
+    <p class="adding"> </p>
+
+</div>
+
+<div class="footer">
+  <p>2019 - 2020 | Made by Jebeca Smith, Miguel Ornelas, Daniel Tonche, Alexandria San Miguel and Jake Reed for Code2College</p>
+</div>
+
+</body>
 </html>
